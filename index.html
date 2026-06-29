@@ -464,6 +464,105 @@ body{ animation: pageIn 0.9s ease both; }
 .contact-info .ci-item{ display:flex; align-items:center; gap:8px; }
 .contact-info svg{ width:16px; height:16px; color:var(--gold-dim); flex-shrink:0; }
 
+
+/* ============================================================
+   OPENING HOURS
+   ============================================================ */
+.hours-section{
+  max-width:var(--maxw); margin:0 auto; padding:70px 24px 50px;
+  text-align:center;
+}
+.hours-section h2{
+  font-family:'Playfair Display', serif; font-size:clamp(1.7rem,3.6vw,2.3rem);
+  color:var(--gold-light); margin-bottom:10px;
+}
+.hours-section .sec-sub{
+  color:var(--text-dim); font-size:0.92rem; margin-bottom:36px;
+}
+.hours-card{
+  display:inline-flex; align-items:center; gap:20px;
+  background:linear-gradient(135deg,rgba(217,166,75,0.08),rgba(217,166,75,0.03));
+  border:1px solid var(--line); border-radius:20px;
+  padding:28px 48px; flex-wrap:wrap; justify-content:center;
+}
+.hours-icon{
+  width:56px; height:56px; border-radius:50%;
+  background:linear-gradient(135deg, var(--gold), var(--gold-dim));
+  display:flex; align-items:center; justify-content:center;
+  flex-shrink:0;
+}
+.hours-icon svg{ width:26px; height:26px; color:var(--void); }
+.hours-text{ text-align:left; }
+.hours-text .ht-days{
+  color:var(--text-dim); font-size:0.85rem; letter-spacing:0.06em;
+  text-transform:uppercase; margin-bottom:4px;
+}
+.hours-text .ht-time{
+  font-family:'Playfair Display', serif;
+  font-size:clamp(1.4rem,3vw,1.9rem);
+  color:var(--gold-light); font-weight:700;
+}
+.hours-open-badge{
+  background:rgba(63,174,91,0.12); border:1px solid rgba(63,174,91,0.3);
+  color:#5ecb78; border-radius:50px; padding:6px 18px;
+  font-size:0.8rem; font-weight:600; letter-spacing:0.05em;
+  text-transform:uppercase;
+}
+
+/* ============================================================
+   CUSTOMER REVIEWS
+   ============================================================ */
+.reviews-section{
+  max-width:var(--maxw); margin:0 auto; padding:70px 24px 50px;
+  text-align:center;
+}
+.reviews-section h2{
+  font-family:'Playfair Display', serif; font-size:clamp(1.7rem,3.6vw,2.3rem);
+  color:var(--gold-light); margin-bottom:10px;
+}
+.reviews-section .sec-sub{
+  color:var(--text-dim); font-size:0.92rem; margin-bottom:40px;
+}
+.reviews-grid{
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:22px;
+}
+.review-card{
+  background:rgba(255,255,255,0.03); border:1px solid var(--line);
+  border-radius:18px; padding:28px 24px; text-align:left;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.review-card:hover{
+  transform:translateY(-5px);
+  border-color:rgba(217,166,75,0.3);
+  box-shadow:0 14px 36px rgba(0,0,0,0.35);
+}
+.review-stars{ color:var(--gold); font-size:1rem; margin-bottom:12px; letter-spacing:2px; }
+.review-text{
+  color:var(--text-dim); font-size:0.91rem; line-height:1.65;
+  margin-bottom:20px; font-style:italic;
+}
+.review-author{ display:flex; align-items:center; gap:12px; }
+.review-avatar{
+  width:40px; height:40px; border-radius:50%;
+  background:linear-gradient(135deg, var(--gold-dim), var(--gold));
+  display:flex; align-items:center; justify-content:center;
+  font-family:'Playfair Display',serif; font-weight:700;
+  color:var(--void); font-size:0.95rem; flex-shrink:0;
+}
+.review-name{ color:var(--text); font-weight:600; font-size:0.88rem; }
+.review-date{ color:var(--text-faint); font-size:0.78rem; margin-top:2px; }
+.reviews-rating-summary{
+  display:flex; align-items:center; justify-content:center; gap:16px;
+  margin-bottom:36px; flex-wrap:wrap;
+}
+.rating-big{
+  font-family:'Playfair Display',serif; font-size:3.5rem;
+  color:var(--gold-light); line-height:1;
+}
+.rating-details{ text-align:left; }
+.rating-details .stars-row{ color:var(--gold); font-size:1.1rem; letter-spacing:2px; }
+.rating-details .rating-count{ color:var(--text-dim); font-size:0.82rem; margin-top:4px; }
 /* ============================================================
    FOOTER
    ============================================================ */
@@ -625,6 +724,103 @@ footer .rim-divider{ margin-bottom:18px; max-width:200px; }
     <div class="menu-grid"></div></section>
 
   <p class="note-strip">All prices are exclusive of applicable taxes. Prices and availability are subject to change.</p>
+
+
+  <!-- ============ OPENING HOURS ============ -->
+  <section class="hours-section">
+    <h2>Opening Hours</h2>
+    <p class="sec-sub">We're open every day — come dine with us!</p>
+    <div class="hours-card">
+      <div class="hours-icon">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg>
+      </div>
+      <div class="hours-text">
+        <div class="ht-days">Monday — Sunday &nbsp;·&nbsp; All Days</div>
+        <div class="ht-time">11:00 AM &nbsp;–&nbsp; 11:00 PM</div>
+      </div>
+      <div class="hours-open-badge">&#x25cf;&nbsp; Open Today</div>
+    </div>
+  </section>
+
+  <!-- ============ CUSTOMER REVIEWS ============ -->
+  <section class="reviews-section">
+    <h2>What Our Guests Say</h2>
+    <div class="reviews-rating-summary">
+      <div class="rating-big">4.8</div>
+      <div class="rating-details">
+        <div class="stars-row">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="rating-count">Based on 240+ reviews</div>
+      </div>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">"Absolutely loved the Spicy Chicken and the Milkshake here! The ambience is cosy, service is fast, and the food is consistently fresh. Will definitely be coming back!"</p>
+        <div class="review-author">
+          <div class="review-avatar">R</div>
+          <div>
+            <div class="review-name">Rahul Sharma</div>
+            <div class="review-date">June 2026</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">"The Chicken Biryani is hands down the best I've had in the city. Perfectly spiced, generous portions, and the staff was super friendly. A must-visit!"</p>
+        <div class="review-author">
+          <div class="review-avatar">P</div>
+          <div>
+            <div class="review-name">Priya Menon</div>
+            <div class="review-date">May 2026</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+        <p class="review-text">"Great value for money! The Cheese Sandwich and French Fries combo is perfect for a quick lunch. Love that they're open until 11 PM — saved us many late nights!"</p>
+        <div class="review-author">
+          <div class="review-avatar">A</div>
+          <div>
+            <div class="review-name">Arjun Kapoor</div>
+            <div class="review-date">May 2026</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">"Ordered via WhatsApp and the food arrived hot and well-packed. The Iced Tea was refreshing and the Nuggets were crispy perfection. Highly recommend!"</p>
+        <div class="review-author">
+          <div class="review-avatar">S</div>
+          <div>
+            <div class="review-name">Sneha Iyer</div>
+            <div class="review-date">April 2026</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">"Visited with family on a Sunday evening — the place was lively yet not too crowded. The Hot Dog and Cocktails were a hit with everyone. Lovely experience overall."</p>
+        <div class="review-author">
+          <div class="review-avatar">M</div>
+          <div>
+            <div class="review-name">Meera Nair</div>
+            <div class="review-date">April 2026</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">"The desserts and beverages selection is fantastic. The Coffee and Fruit Salad after dinner was the perfect end to a great meal. THE URBAN RESTRO never disappoints!"</p>
+        <div class="review-author">
+          <div class="review-avatar">K</div>
+          <div>
+            <div class="review-name">Kiran Joshi</div>
+            <div class="review-date">March 2026</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- ============ CONTACT / CTA ============ -->
   <section class="contact-section" id="contact">
